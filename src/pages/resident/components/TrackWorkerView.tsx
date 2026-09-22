@@ -1,5 +1,6 @@
 import React from 'react';
 import { useApp } from '../../../context/AppContext';
+import { getAssetUrl } from '../../../utils/assets';
 import {
   UserCheck,
   Phone,
@@ -57,7 +58,7 @@ export const TrackWorkerView: React.FC = () => {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-b border-[#FAF8F5] pb-6">
               <div className="flex items-center gap-4">
                 <img
-                  src={activeTicket.workerAvatar || '/images/maintenance_technician.jpg'}
+                  src={getAssetUrl(activeTicket.workerAvatar || '/images/maintenance_technician.jpg')}
                   alt={activeTicket.workerName}
                   className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover border-2 border-[#E6E0D5] shadow-xs"
                 />

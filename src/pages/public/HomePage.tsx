@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
+import { getAssetUrl } from '../../utils/assets';
 import {
   Building2,
   ShieldCheck,
@@ -164,7 +165,7 @@ export const HomePage: React.FC = () => {
       <section className="relative min-h-screen h-screen w-full flex items-center overflow-hidden">
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/hero_community.jpg')" }}
+          style={{ backgroundImage: `url('${getAssetUrl('/images/hero_community.jpg')}')` }}
         />
         <div className="absolute inset-0 z-1 bg-gradient-to-r from-black/85 via-black/55 to-transparent pointer-events-none" />
 
@@ -247,7 +248,7 @@ export const HomePage: React.FC = () => {
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#E6E0D5]">
               <img
-                src="/images/apartment_living.jpg"
+                src={getAssetUrl('/images/apartment_living.jpg')}
                 alt="Modern Apartment Living Room"
                 className="w-full h-full object-cover aspect-[4/3]"
               />
@@ -349,7 +350,7 @@ export const HomePage: React.FC = () => {
             
             <div className="lg:col-span-7 relative min-h-[360px]">
               <img
-                src="/images/block_complex.jpg"
+                src={getAssetUrl('/images/block_complex.jpg')}
                 alt="Green Meadows Residential Tower"
                 className="w-full h-full object-cover"
               />
@@ -499,7 +500,7 @@ export const HomePage: React.FC = () => {
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#E6E0D5]">
               <img
-                src="/images/utility_sensor.jpg"
+                src={getAssetUrl('/images/utility_sensor.jpg')}
                 alt="Apartment Kitchen Utility Sensor"
                 className="w-full h-full object-cover aspect-[4/3]"
               />
@@ -815,7 +816,7 @@ export const HomePage: React.FC = () => {
       <section className="app-container">
         <div className="relative rounded-3xl overflow-hidden shadow-2xl min-h-[380px] flex items-center justify-center text-center p-8 sm:p-16">
           <img
-            src="/images/balcony_nature.jpg"
+            src={getAssetUrl('/images/balcony_nature.jpg')}
             alt="Sunny Apartment Balcony View"
             className="absolute inset-0 w-full h-full object-cover"
           />

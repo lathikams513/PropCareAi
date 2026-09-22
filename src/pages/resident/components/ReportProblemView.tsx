@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../../../context/AppContext';
+import { getAssetUrl } from '../../../utils/assets';
 import {
   Send,
   Mic,
@@ -40,7 +41,7 @@ export const ReportProblemView: React.FC<ReportProblemViewProps> = ({ onSuccessN
   const [reportProblem, setReportProblem] = useState('');
   const [reportDesc, setReportDesc] = useState('');
   const [reportPriority, setReportPriority] = useState<Priority>('high');
-  const [reportPhoto, setReportPhoto] = useState<string>('/images/utility_sensor.jpg');
+  const [reportPhoto, setReportPhoto] = useState<string>(getAssetUrl('/images/utility_sensor.jpg'));
   const [isRecordingVoice, setIsRecordingVoice] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
 

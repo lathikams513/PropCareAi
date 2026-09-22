@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../../../context/AppContext';
+import { getAssetUrl } from '../../../utils/assets';
 import { MaintenanceTicket } from '../../../types';
 import { WorkerNavTab } from './WorkerSidebar';
 import { WorkCompletionModal } from './WorkCompletionModal';
@@ -80,7 +81,7 @@ export const WorkerHome: React.FC<WorkerHomeProps> = ({ onNavigate }) => {
       <section className="relative rounded-3xl overflow-hidden border border-[#E6E0D5] shadow-lg bg-white">
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/corridor_floor.jpg')" }}
+          style={{ backgroundImage: `url('${getAssetUrl('/images/corridor_floor.jpg')}')` }}
         />
         <div className="absolute inset-0 z-1 bg-gradient-to-r from-black/80 via-black/60 to-black/35 backdrop-blur-[2px] pointer-events-none" />
 

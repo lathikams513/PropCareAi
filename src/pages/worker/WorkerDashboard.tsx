@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
+import { getAssetUrl } from '../../utils/assets';
 import { WorkerLogin } from './WorkerLogin';
 import { WorkerSidebar, WorkerNavTab } from './components/WorkerSidebar';
 import { WorkerHome } from './components/WorkerHome';
@@ -66,7 +67,7 @@ export const WorkerDashboard: React.FC = () => {
       {/* Background Apartment Visual with Soft Readability Overlay */}
       <div 
         className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat pointer-events-none opacity-15"
-        style={{ backgroundImage: "url('/images/hero_community.jpg')" }}
+        style={{ backgroundImage: `url('${getAssetUrl('/images/hero_community.jpg')}')` }}
       />
       <div className="fixed inset-0 z-0 bg-gradient-to-b from-[#FAFAF8]/95 via-[#FAF8F5]/90 to-[#FAFAF8]/98 pointer-events-none" />
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
+import { getAssetUrl } from '../../utils/assets';
 import {
   Building2,
   ArrowLeft,
@@ -248,7 +249,7 @@ export const CommunityExplorer: React.FC = () => {
 
           <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#E6E0D5] min-h-[460px] flex flex-col justify-end p-6 sm:p-10">
             <img
-              src="/images/block_complex.jpg"
+              src={getAssetUrl('/images/block_complex.jpg')}
               alt="Green Meadows Residential Complex"
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -315,7 +316,7 @@ export const CommunityExplorer: React.FC = () => {
             
             <div className="lg:col-span-7 relative min-h-[280px]">
               <img
-                src="/images/corridor_floor.jpg"
+                src={getAssetUrl('/images/corridor_floor.jpg')}
                 alt="Apartment Corridor Hallway"
                 className="w-full h-full object-cover"
               />
@@ -479,7 +480,7 @@ export const CommunityExplorer: React.FC = () => {
           <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#E6E0D5] min-h-[520px] flex items-center justify-center p-6">
             
             <img
-              src="/images/apartment_door.jpg"
+              src={getAssetUrl('/images/apartment_door.jpg')}
               alt="Apartment Door Entry"
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -592,7 +593,7 @@ export const CommunityExplorer: React.FC = () => {
 
           <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#E6E0D5] min-h-[520px]">
             <img
-              src="/images/apartment_living.jpg"
+              src={getAssetUrl('/images/apartment_living.jpg')}
               alt="Apartment Living Room Interior"
               className="w-full h-full object-cover min-h-[520px]"
             />

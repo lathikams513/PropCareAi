@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
+import { getAssetUrl } from '../../utils/assets';
 import { AdminLogin } from './AdminLogin';
 import {
   Building2,
@@ -244,7 +245,7 @@ export const AdminDashboard: React.FC = () => {
       {/* Background Apartment Visual with Soft Readability Overlay */}
       <div 
         className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat pointer-events-none opacity-20"
-        style={{ backgroundImage: "url('/images/hero_community.jpg')" }}
+        style={{ backgroundImage: `url('${getAssetUrl('/images/hero_community.jpg')}')` }}
       />
       <div className="fixed inset-0 z-0 bg-gradient-to-b from-[#FAFAF8]/95 via-[#FAF8F5]/90 to-[#FAFAF8]/98 pointer-events-none" />
 
@@ -257,7 +258,7 @@ export const AdminDashboard: React.FC = () => {
           {/* Hero background image with gradient overlay */}
           <div 
             className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/block_complex.jpg')" }}
+            style={{ backgroundImage: `url('${getAssetUrl('/images/block_complex.jpg')}')` }}
           />
           <div className="absolute inset-0 z-1 bg-gradient-to-r from-black/85 via-black/60 to-black/40 backdrop-blur-[2px] pointer-events-none" />
 

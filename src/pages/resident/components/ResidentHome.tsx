@@ -1,5 +1,6 @@
 import React from 'react';
 import { useApp } from '../../../context/AppContext';
+import { getAssetUrl } from '../../../utils/assets';
 import {
   Droplets,
   Zap,
@@ -57,7 +58,7 @@ export const ResidentHome: React.FC<ResidentHomeProps> = ({
         {/* Large Apartment Visual Environment */}
         <div className="relative h-64 sm:h-80 md:h-96 w-full">
           <img
-            src="/images/apartment_living.jpg"
+            src={getAssetUrl('/images/apartment_living.jpg')}
             alt={`Apartment ${apt.id} Interior`}
             className="w-full h-full object-cover object-center"
           />

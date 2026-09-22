@@ -1,4 +1,5 @@
 import { Block, Apartment, WorkerProfile, MaintenanceTicket, AIAlert, ActivityEvent, NotificationItem, SensorItem } from '../types';
+import { getAssetUrl } from '../utils/assets';
 
 export const INITIAL_BLOCKS: Block[] = [
   {
@@ -10,7 +11,7 @@ export const INITIAL_BLOCKS: Block[] = [
     healthyCount: 59,
     warningCount: 3,
     maintenanceCount: 2,
-    image: '/images/block_complex.jpg'
+    image: getAssetUrl('/images/block_complex.jpg')
   },
   {
     id: 'B',
@@ -21,7 +22,7 @@ export const INITIAL_BLOCKS: Block[] = [
     healthyCount: 61,
     warningCount: 2,
     maintenanceCount: 1,
-    image: '/images/block_complex.jpg'
+    image: getAssetUrl('/images/block_complex.jpg')
   },
   {
     id: 'C',
@@ -32,7 +33,7 @@ export const INITIAL_BLOCKS: Block[] = [
     healthyCount: 62,
     warningCount: 1,
     maintenanceCount: 1,
-    image: '/images/block_complex.jpg'
+    image: getAssetUrl('/images/block_complex.jpg')
   }
 ];
 
@@ -675,8 +676,8 @@ export const INITIAL_TICKETS: MaintenanceTicket[] = [
     materialsUsed: ['Condensate Drain Tablet x1', 'Flexible PVC Coupling x1'],
     partsReplaced: ['Flexible PVC Coupling x1'],
     repairCost: 250,
-    beforeImage: '/images/apartment_living.jpg',
-    afterImage: '/images/apartment_living.jpg',
+    beforeImage: getAssetUrl('/images/apartment_living.jpg'),
+    afterImage: getAssetUrl('/images/apartment_living.jpg'),
     residentRating: 5,
     residentFeedback: 'Super quick response, problem resolved before any ceiling damage occurred!',
     timeline: [
@@ -735,8 +736,8 @@ export const INITIAL_TICKETS: MaintenanceTicket[] = [
     workerNotes: 'Re-aligned lower roller track with silicone lubricant and tightened stainless steel clamping brackets.',
     partsReplaced: ['Stainless Steel Clamp x2', 'Track Roller Guide x1'],
     repairCost: 450,
-    beforeImage: '/images/balcony_nature.jpg',
-    afterImage: '/images/balcony_nature.jpg',
+    beforeImage: getAssetUrl('/images/balcony_nature.jpg'),
+    afterImage: getAssetUrl('/images/balcony_nature.jpg'),
     timeline: [
       { status: 'resident_confirmed', timestamp: 'Yesterday, 04:15 PM', note: 'Reported manually by resident' },
       { status: 'admin_confirmed', timestamp: 'Yesterday, 04:30 PM', note: 'Approved by property manager' },

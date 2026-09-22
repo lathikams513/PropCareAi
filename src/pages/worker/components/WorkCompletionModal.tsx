@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../../../context/AppContext';
+import { getAssetUrl } from '../../../utils/assets';
 import { MaintenanceTicket } from '../../../types';
 import { 
   X, 
@@ -27,8 +28,8 @@ export const WorkCompletionModal: React.FC<WorkCompletionModalProps> = ({ ticket
   const [materialsUsed, setMaterialsUsed] = useState(ticket.materialsUsed?.join(', ') || '1x Brass Compression Valve, 1x Silicone O-Ring, 1x PTFE Seal Tape');
   const [notes, setNotes] = useState(ticket.workerNotes || 'System hydrostatic test completed at 3.5 bar with 0 psi drop over 15 minutes. 100% operational.');
   const [cost, setCost] = useState<number>(ticket.repairCost || 350);
-  const [beforeImage, setBeforeImage] = useState(ticket.beforeImage || '/images/utility_sensor.jpg');
-  const [afterImage, setAfterImage] = useState(ticket.afterImage || '/images/apartment_living.jpg');
+  const [beforeImage, setBeforeImage] = useState(ticket.beforeImage || getAssetUrl('/images/utility_sensor.jpg'));
+  const [afterImage, setAfterImage] = useState(ticket.afterImage || getAssetUrl('/images/apartment_living.jpg'));
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
 

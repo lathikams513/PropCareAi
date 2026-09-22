@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../../../context/AppContext';
+import { getAssetUrl } from '../../../utils/assets';
 import {
   Droplets,
   Zap,
@@ -203,7 +204,7 @@ export const MyApartmentView: React.FC = () => {
             {/* Apartment Photography Background */}
             <div className="relative h-72 sm:h-96 md:h-[420px] w-full">
               <img
-                src="/images/apartment_living.jpg"
+                src={getAssetUrl('/images/apartment_living.jpg')}
                 alt="Apartment Interior Hotspots"
                 className="w-full h-full object-cover object-center"
               />
